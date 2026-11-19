@@ -1,0 +1,60 @@
+/* Diagnostics */
+.diagnostic-body {
+  overflow-x: auto;
+}
+
+.diagnostic-page {
+  width: min(1020px, 100%);
+  margin: 0 auto;
+  padding: 24px 18px 60px;
+}
+
+.diagnostic-header h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.diagnostic-header p {
+  max-width: 850px;
+  line-height: 1.5;
+}
+
+.diag-status {
+  padding: 10px 14px;
+  background: #fffdf6;
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+
+.diag-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 16px 0 22px;
+  font-size: 0.9rem;
+}
+
+.diag-nav a {
+  color: #245f79;
+}
+
+.diag-canvas-wrap {
+  overflow: auto;
+  margin: 0 0 22px;
+  padding: 0;
+  background: #f7f8f0;
+  border: 1px solid rgba(92, 110, 92, 0.25);
+  border-radius: 14px;
+}
+
+.diag-canvas-wrap canvas {
+  display: block;
+}
+
+.diag-note {
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}

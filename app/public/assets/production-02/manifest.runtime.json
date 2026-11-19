@@ -1,0 +1,231 @@
+{
+  "pack": "production-02",
+  "format": "svg",
+  "runtimeRoot": "runtime/",
+  "appearanceApproval": {
+    "card": "da2ee7c6-c1ca-4fa5-9751-4a7032501511",
+    "relayMessage": "b841ecef-6d81-4617-8581-01dea8682966",
+    "scope": "user-approved appearance only; runtime technical checks pending"
+  },
+  "faceRenderWidthBodyFraction": 0.45,
+  "background": {
+    "sourceSize": [
+      576,
+      1008
+    ],
+    "space": "screen",
+    "url": "background-main.svg"
+  },
+  "floor": {
+    "centerX": 256,
+    "physicalWidth": 4.4,
+    "sourceSize": [
+      512,
+      128
+    ],
+    "topLineY": 22,
+    "url": "floor.svg"
+  },
+  "bodies": [
+    {
+      "id": "default",
+      "url": "bodies/default.svg",
+      "sourceSize": [
+        512,
+        384
+      ],
+      "logicalRectPx": [
+        48,
+        80,
+        416,
+        268.387096774194
+      ],
+      "pivotPx": [
+        256,
+        348.387096774194
+      ],
+      "faceAnchorBodyUV": [
+        0.5,
+        0.48
+      ],
+      "decorativeBoundsPx": [
+        44,
+        20,
+        480,
+        356
+      ],
+      "boundsConvention": "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha"
+    },
+    {
+      "id": "ginger",
+      "url": "bodies/ginger.svg",
+      "sourceSize": [
+        512,
+        384
+      ],
+      "logicalRectPx": [
+        48,
+        80,
+        416,
+        268.387096774194
+      ],
+      "pivotPx": [
+        256,
+        348.387096774194
+      ],
+      "faceAnchorBodyUV": [
+        0.5,
+        0.48
+      ],
+      "decorativeBoundsPx": [
+        44,
+        20,
+        480,
+        356
+      ],
+      "boundsConvention": "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha"
+    },
+    {
+      "id": "tuxedo",
+      "url": "bodies/tuxedo-legibility.svg",
+      "sourceSize": [
+        512,
+        384
+      ],
+      "logicalRectPx": [
+        48,
+        80,
+        416,
+        268.387096774194
+      ],
+      "pivotPx": [
+        256,
+        348.387096774194
+      ],
+      "faceAnchorBodyUV": [
+        0.5,
+        0.48
+      ],
+      "decorativeBoundsPx": [
+        44,
+        20,
+        480,
+        356
+      ],
+      "boundsConvention": "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha"
+    },
+    {
+      "id": "calico",
+      "url": "bodies/calico.svg",
+      "sourceSize": [
+        512,
+        384
+      ],
+      "logicalRectPx": [
+        48,
+        80,
+        416,
+        268.387096774194
+      ],
+      "pivotPx": [
+        256,
+        348.387096774194
+      ],
+      "faceAnchorBodyUV": [
+        0.5,
+        0.48
+      ],
+      "decorativeBoundsPx": [
+        44,
+        20,
+        480,
+        356
+      ],
+      "boundsConvention": "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha"
+    }
+  ],
+  "faces": [
+    {
+      "id": "idle",
+      "url": "faces/idle.svg",
+      "sourceSize": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "focused",
+      "url": "faces/focused.svg",
+      "sourceSize": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "happy",
+      "url": "faces/happy.svg",
+      "sourceSize": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "surprised",
+      "url": "faces/surprised.svg",
+      "sourceSize": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "worried",
+      "url": "faces/worried.svg",
+      "sourceSize": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "dizzy",
+      "url": "faces/dizzy.svg",
+      "sourceSize": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        64
+      ]
+    }
+  ],
+  "notes": "Runtime subset of Studio production-02; authoring sources/receipts/scripts are not shipped. Base appearance approval and CT-ART-004 variant approval are separate; technical validation is recorded in app/M2-EVIDENCE.md.",
+  "variantApproval": {
+    "variantId": "ct-art-004",
+    "appliesTo": "tuxedo",
+    "appearanceCard": "95e0f689-310e-4984-b68d-a8588f192e1a",
+    "relayMessage": "3691f833-14cc-49c9-a083-d39f777922a9",
+    "sha256": "5fb79154049506515fb205226a15168ea8904ba5ea05282c843bc48958590cfb",
+    "bytes": 1586,
+    "scope": "user appearance-approved variant; base production-02 appearance approval remains separate; original tuxedo retained but not mapped"
+  }
+}

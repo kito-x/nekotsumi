@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#e8eee1" />
+    <title>Nekotsumi</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <p id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+    <main id="shell" class="shell">
+      <section id="home-screen" class="screen home-screen" aria-labelledby="home-title">
+        <header class="brand">
+          <p class="eyebrow">A tiny stacking game</p>
+          <h1 id="home-title">Nekotsumi</h1>
+          <p class="tagline">Drop cats onto the top of your tower.</p>
+        </header>
+        <div class="mode-picker" role="group" aria-labelledby="mode-label">
+          <span id="mode-label" class="field-label">Mode</span>
+          <button id="mode-classic" class="mode-button" type="button" aria-pressed="true">
+            <strong>Classic<span id="mode-classic-selected" class="mode-check">✓ Selected</span></strong><span>Moving cat, timed drop</span>
+          </button>
+          <button id="mode-assist" class="mode-button" type="button" aria-pressed="false">
+            <strong>Assist<span id="mode-assist-selected" class="mode-check" hidden>✓ Selected</span></strong><span>Position, then drop</span>
+          </button>
+        </div>
+
+        <button id="start-button" class="primary-button start-button" type="button">Start Classic</button>
+        <p id="home-save-notice" class="notice save-notice" hidden></p>
+        <div id="home-profile-row" class="profile-summary" aria-label="Profile summary">
+          <div class="home-preview">
+            <canvas id="home-cat-preview" width="80" height="80" aria-label="Selected cat preview"></canvas>
+            <span id="home-skin-name">Default</span>
+          </div>
+          <div class="profile-copy">
+            <p id="home-best">Best (Classic): score 0 · height 0</p>
+            <p id="home-collection">Cats collected 1/4 · 0 stacked in total</p>
+          </div>
+        </div>
+        <div class="home-links">
+          <button id="collection-button" class="secondary-button" type="button">Collection</button>
+          <button id="how-to-button" class="secondary-button" type="button">How to play</button>
+          <button id="home-settings-button" class="secondary-button" type="button">Settings</button>
+        </div>
+        <div id="other-tab-actions" class="other-tab-actions" hidden>
+          <button id="retry-access-button" class="primary-button" type="button">Retry save access</button>
+          <button id="play-temporary-button" class="secondary-button" type="button">Play temporarily</button>
+        </div>
+        <p id="home-save-action" class="status-line" aria-live="polite" hidden></p>
+        <p id="home-instruction" class="instruction">
+          Tap the playfield, press Space/Enter, or use Drop. Aim for the platform, then the top cat.
+        </p>
+        <p class="instruction small">Assist mode adds Left/Right positioning with a stability preview.</p>
+      </section>
+
+      <section id="game-screen" class="screen game-screen" aria-labelledby="game-title" hidden>
+        <h2 id="game-title" class="sr-only">Nekotsumi playfield</h2>
+        <header class="hud">
+          <div class="hud-stat hud-score-stat"><span>Score</span><strong id="hud-score">0</strong></div>
+          <div class="hud-stat hud-height-stat"><span>Stacked</span><strong id="hud-height">0</strong></div>
+          <div class="hud-stat hud-mode"><span>Mode</span><strong id="hud-mode">Classic</strong></div>
+          <p id="hud-chain" class="hud-chain" hidden>Perfect ×2</p>
+          <p id="hud-safety" class="hud-safety safety-steady" data-level="steady">
+            <span class="safety-mark" aria-hidden="true">●</span><span id="hud-safety-text">Steady</span>
+          </p>
+          <button id="pause-button" class="icon-button hud-pause" type="button" aria-label="Pause game">Pause</button>
+        </header>
+        <p id="game-save-notice" class="notice game-notice" hidden></p>
+        <div id="playfield-wrap" class="playfield-wrap">
+          <canvas id="game-canvas" tabindex="0" role="application"
+            aria-label="Nekotsumi playfield. Drop the cat onto the top of the tower."
+            aria-describedby="canvas-help"></canvas>
+          <p id="canvas-help" class="sr-only">
+            The cat falls onto the highest settled cat. In Assist mode, use Left and Right to position it.
+          </p>
+        </div>
+        <div class="game-side">
+          <p id="game-status" class="status-line" aria-live="off">Ready</p>
+          <p id="assist-readout" class="assist-readout" aria-live="off" hidden></p>
+          <div class="controls" aria-label="Play controls">
+            <button id="left-button" class="assist-button" type="button" aria-label="Move cat left" hidden>Left</button>
+            <button id="drop-button" class="drop-button" type="button" disabled>Drop</button>
+            <button id="right-button" class="assist-button" type="button" aria-label="Move cat right" hidden>Right</button>
+            <button id="skip-button" class="skip-button" type="button" hidden>Skip to results</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="results-screen" class="screen results-screen" aria-labelledby="results-title" hidden>
+        <p class="eyebrow">Round over</p>
+        <h2 id="results-title">Nice stacking!</h2>
+        <p id="results-reason" class="results-reason"></p>
+        <p id="results-best" class="results-best"></p>
+        <div id="results-badges" class="results-badges" hidden></div>
+        <dl class="results-stats">
+          <div><dt>Score</dt><dd id="results-score">0</dd></div>
+          <div><dt>Cats stacked</dt><dd id="results-height">0</dd></div>
+        </dl>
+        <p id="results-save-notice" class="notice save-notice" hidden></p>
+        <div class="results-actions">
+          <button id="replay-button" class="primary-button" type="button">Replay</button>
+          <button id="change-mode-button" class="secondary-button" type="button">Change mode</button>
+          <button id="results-collection-button" class="secondary-button" type="button">Collection</button>
+          <button id="results-home-button" class="secondary-button" type="button">Home</button>
+        </div>
+        <div id="results-unlocks" class="results-unlocks"></div>
+      </section>
+
+      <section id="error-screen" class="screen error-screen" aria-labelledby="error-title" hidden>
+        <p class="eyebrow">Nekotsumi</p>
+        <h2 id="error-title">The playfield could not start</h2>
+        <p id="error-message">Your browser could not create the canvas view. Gameplay is unchanged.</p>
+        <button id="error-reload-button" class="primary-button" type="button">Reload</button>
+      </section>
+    </main>
+
+    <dialog id="pause-dialog" class="modal" aria-labelledby="pause-title">
+      <h2 id="pause-title" tabindex="-1">Paused</h2>
+      <p id="pause-reason" class="modal-copy">Take your time.</p>
+      <div class="modal-actions">
+        <button id="resume-button" class="primary-button" type="button">Resume</button>
+        <button id="pause-settings-button" class="secondary-button" type="button">Settings</button>
+        <button id="restart-button" class="secondary-button" type="button">Restart</button>
+        <button id="pause-home-button" class="secondary-button" type="button">Home</button>
+      </div>
+    </dialog>
+
+    <dialog id="confirm-dialog" class="modal" aria-labelledby="confirm-title">
+      <h2 id="confirm-title" tabindex="-1">End this temporary round?</h2>
+      <p id="confirm-message" class="modal-copy">End this temporary round and start again?</p>
+      <div class="modal-actions">
+        <button id="confirm-cancel-button" class="secondary-button" type="button">Cancel</button>
+        <button id="confirm-accept-button" class="primary-button" type="button">Confirm</button>
+      </div>
+    </dialog>
+
+    <dialog id="tutorial-dialog" class="modal tutorial-modal" aria-labelledby="tutorial-title">
+      <p id="tutorial-progress" class="eyebrow">Tutorial 1 of 2</p>
+      <h2 id="tutorial-title" tabindex="-1">Drop cats onto the top of your tower</h2>
+      <p id="tutorial-copy" class="modal-copy"></p>
+      <div class="modal-actions tutorial-actions">
+        <button id="tutorial-back-button" class="secondary-button" type="button">Back</button>
+        <button id="tutorial-next-button" class="primary-button" type="button">Next</button>
+        <button id="tutorial-skip-button" class="secondary-button" type="button">Skip</button>
+        <button id="tutorial-start-button" class="primary-button" type="button">Start playing</button>
+      </div>
+    </dialog>
+
+    <dialog id="settings-dialog" class="modal settings-modal" aria-labelledby="settings-title">
+      <h2 id="settings-title" tabindex="-1">Settings</h2>
+      <label class="settings-check"><input id="sound-enabled-checkbox" type="checkbox" checked /> Sound effects</label>
+      <div class="settings-volume">
+        <label for="volume-slider">Volume</label>
+        <input id="volume-slider" type="range" min="0" max="100" step="1" value="60" />
+        <span id="volume-value" aria-hidden="true">60%</span>
+      </div>
+      <p id="sound-status" class="settings-status" role="status" aria-live="polite" hidden></p>
+      <fieldset class="settings-group">
+        <legend>Motion</legend>
+        <label><input type="radio" name="motion" value="system" /> System</label>
+        <label><input type="radio" name="motion" value="on" /> Reduced</label>
+        <label><input type="radio" name="motion" value="off" /> Full</label>
+      </fieldset>
+      <label class="settings-check"><input id="high-contrast-checkbox" type="checkbox" /> High contrast</label>
+      <p class="assist-about"><strong>About Assist:</strong> Assist uses the same tower, physics and score as Classic, but the cat stays put until you move it with Left/Right. The readout shows offset, overlap and whether the current drop is stable.</p>
+      <div class="modal-actions"><button id="settings-close-button" class="primary-button" type="button">Close settings</button></div>
+    </dialog>
+
+    <dialog id="collection-dialog" class="modal collection-modal" aria-labelledby="collection-title">
+      <h2 id="collection-title" tabindex="-1">Cat collection</h2>
+      <p class="modal-copy">Cosmetics apply to the next run. All coats use identical physics.</p>
+      <div id="collection-cards" class="collection-cards"></div>
+      <div class="modal-actions"><button id="collection-close-button" class="primary-button" type="button">Close collection</button></div>
+    </dialog>
+
+    <dialog id="howto-dialog" class="modal" aria-labelledby="howto-title">
+      <h2 id="howto-title" tabindex="-1">How to play</h2>
+      <p class="modal-copy">Drop cats onto the top of your tower. Tap the playfield, press Space or Enter, or use Drop.</p>
+      <p class="modal-copy">Keep the tower's weight over each cat below. A wobble means danger. In Assist, use Left/Right to position, then Drop.</p>
+      <div class="modal-actions"><button id="howto-close-button" class="primary-button" type="button">Close</button></div>
+    </dialog>
+
+    <div id="unlock-toast" class="unlock-toast" hidden></div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

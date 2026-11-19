@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-16T00:20:39.003Z",
+  "scope": "static files/metadata/archive only",
+  "runtimeFiles": 21,
+  "runtimeBytes": 8849,
+  "defaultAndFacesBytes": 3122,
+  "optionalCoatsBytes": 3005,
+  "backgroundBytes": 431,
+  "geometryMetadata": "pass",
+  "localPathsAndSourceScan": "pass",
+  "archiveRuntimeFilesIdentical": true,
+  "currentArtStatus": "provisional-selection-reopened",
+  "archiveArtStatus": "approved",
+  "approvalReference": "4594228a-c9b8-47e0-91e7-dfe9d4dd6c06:approve",
+  "manifestSHA256": "2a4ad9b2abaeb1b6901d68a96ddbf406a6289a60c4c48af4d9e17c74c9bed14f",
+  "archiveSHA256": "b92556ccf7941e25c7e719949020ef13035cd406af6bb148c38c8735f10fd625",
+  "unchecked": [
+    "browser decoding",
+    "painted decorative bounds/alpha",
+    "80px expression legibility",
+    "renderer anchors/transforms",
+    "portrait/landscape gameplay",
+    "real devices",
+    "final selected-source runtime pack and adaptation approval"
+  ]
+}

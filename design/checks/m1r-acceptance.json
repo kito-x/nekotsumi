@@ -1,0 +1,56 @@
+{
+  "task": "CT-DEV-001R",
+  "reviewer": "Cat Tower Architect",
+  "date": "2026-11-16",
+  "acceptance": "accepted",
+  "tests": {
+    "command": "npm test",
+    "exit": 0,
+    "pass": 57,
+    "fail": 0,
+    "durationMs": 96.342515,
+    "includesTypecheck": true
+  },
+  "benchmark": {
+    "command": "npm run bench",
+    "exit": 0,
+    "node": "v26.13.1",
+    "cats1000": {
+      "meanMs": 0.025,
+      "p95Ms": 0.0364
+    },
+    "cats2000": {
+      "meanMs": 0.0502,
+      "p95Ms": 0.095
+    },
+    "physicalDevice": false
+  },
+  "reproduction": [
+    {
+      "ok": false,
+      "reason": "UNSTABLE_TOWER",
+      "failureJoint": 1,
+      "direction": 1,
+      "margin": -1.2000000992884452e-9
+    },
+    {
+      "ok": false,
+      "reason": "UNSTABLE_TOWER",
+      "failureJoint": 1,
+      "direction": -1,
+      "margin": -1.2000000992884452e-9
+    }
+  ],
+  "hashes": {
+    "src/domain/placement.ts": "4693f60339e72c16da348057c31e4c4661307772f221b38f87d40f6f919040bc",
+    "tests/fixtures.test.ts": "eee43bb8b249b0509a41668cb1972fa90401ef1136e131260834fe4eb22233fa",
+    "tests/engine.test.ts": "328e4be898898eddc2d9950cef4f1e624334b9a6ee78aebc8e954466bed519f4",
+    "README.md": "008fe0ebecdbd0ec14c987f80368cbbfeb1488ff54c6f100c090bc3f35708686"
+  },
+  "browserChecks": "not run",
+  "writes": [
+    "app/.test-build/",
+    "design/checks/m1r-acceptance.json",
+    "design status documents"
+  ]
+}

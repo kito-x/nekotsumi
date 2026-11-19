@@ -1,0 +1,22 @@
+{
+  "status": "visual-direction-approved-runtime-assets-pending",
+  "approvalReference": "4d1b1697-f83d-4b3c-8f54-bf2b9fe7b9b4:select",
+  "cats": {
+    "path": "grok-cats.jpg",
+    "provider": "xAI direct",
+    "model": "grok-imagine-image-2.0"
+  },
+  "background": {
+    "path": "../review-01/background-A-sunroom.png",
+    "provider": "Google Gemini via OpenRouter",
+    "model": "google/gemini-2.5-flash-image"
+  },
+  "nextPreparation": [
+    "Use selected Grok cat designs as identity/style masters; prepare consistent transparent individual bodies and independent expressions",
+    "Adapt original Gemini Sunroom A to agreed quiet playfield, separate its painted floor/platform and meet runtime size budget",
+    "Keep fixed logical 1.55 ratio and bottom-center pivot; re-review material appearance changes",
+    "Do not treat production-01 native vector adaptation as current approved final appearance"
+  ],
+  "pendingStudioApprovalQuestions": [],
+  "audioGenerated": false
+}

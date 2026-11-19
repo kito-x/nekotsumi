@@ -1,0 +1,65 @@
+{
+  "task": "CT-DEV-002R",
+  "date": "2026-11-16",
+  "reviewer": "Architect",
+  "status": "accepted",
+  "tests": {
+    "command": "npm test",
+    "exit": 0,
+    "pass": 65,
+    "fail": 0,
+    "durationMs": 145.641737,
+    "includesTypecheck": true
+  },
+  "build": {
+    "command": "npm run build",
+    "exit": 0,
+    "producedMain": "main-CRIHDIwU.js",
+    "producedMainSha256": "40c8ced75ea6d3df563bcdf82643d54d4742c2d6fcba85d76f1d9a7bfeca3c02",
+    "producedMainHashSource": "Developer-reported; artifact replaced by concurrent authorized art rebuild before independent hash check",
+    "currentObservedMain": "main-CrK_-WtQ.js",
+    "currentObservedSha256": "c6cfa64e2aa534a186cd875ca78b37e3eb207e4987fd4471d33488ac85cf46d8",
+    "currentArtifactNote": "newer integration artifact, not automatically covered by pre-integration65-test result"
+  },
+  "browser": {
+    "route": "OpenBot private browser",
+    "stalledManifest": {
+      "method": "same-origin actual app srcdoc; optional manifest fetch never resolves, ignores abort",
+      "result": "1500ms deadline enables Start with immutable placeholders",
+      "artReady": false,
+      "phaseAfterStart": "SPAWN_CUE",
+      "viewport": [
+        844,
+        390
+      ],
+      "dropHeight": 64,
+      "iframeRemoved": true
+    },
+    "heldEnter": {
+      "method": "capture-mode synthetic DOM keydown/click; not physical/native key validation",
+      "afterFirst": {
+        "score": 15,
+        "height": 1,
+        "phase": "AIMING",
+        "spawn": 2
+      },
+      "heldRepeat": "AIMING,spawn2",
+      "afterKeyupAndFreshEnter": "FALLING"
+    },
+    "listenerRegistrations": {
+      "window": 3,
+      "document": 3,
+      "canvas": 2,
+      "motion": 1
+    }
+  },
+  "remaining": [
+    "CT-DEV-ART-004 rendered integration evidence",
+    "CT-TEST-001 independent report",
+    "physical devices/screen reader/other browsers/actual zoom/frame timing"
+  ],
+  "writes": [
+    "ignored app/.test-build and dist regenerated",
+    "design status and evidence"
+  ]
+}

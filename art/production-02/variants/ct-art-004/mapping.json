@@ -1,0 +1,122 @@
+{
+  "variantId": "ct-art-004",
+  "basePack": "production-02",
+  "created": "2026-11-16",
+  "status": "appearance-review-held-by-architect-og-decision-pending",
+  "purpose": "Technical tuxedo face legibility option at 80 CSS px: both eyes and line expressions must distinguish on the shared 128 px face set without changing face geometry or expression designs. This variant improves contrast but changes a visible coat marking; it is not approved for integration.",
+  "change": {
+    "type": "tuxedo body-only coat-appropriate cream face mask",
+    "sourceVariant": "bodies/tuxedo.svg",
+    "sourceBytes": 1586,
+    "sourceSha256": "5fb79154049506515fb205226a15168ea8904ba5ea05282c843bc48958590cfb",
+    "baseRuntimeFile": "../../runtime/bodies/tuxedo.svg",
+    "baseBytes": 1422,
+    "baseSha256": "6759a36ac0a38f7cda377ce71ca7a6c4fbb4102bbf436be4c8c27da6aeaf245a",
+    "runtimeTargetSuggestion": "bodies/tuxedo-legibility.svg",
+    "manifestPatch": [
+      {
+        "op": "replace",
+        "path": "/bodies/2/url",
+        "value": "bodies/tuxedo-legibility.svg"
+      }
+    ],
+    "integration": "Copy the variant to runtime/bodies/tuxedo-legibility.svg and change only bodies[tuxedo].url in manifest.runtime.json. Keep bodies/tuxedo.svg and every original hash unchanged. No renderer or loader code change is needed; drawCat already loads the body URL from the manifest and the six shared faces are untouched."
+  },
+  "unchanged": {
+    "faces": [
+      {
+        "id": "idle",
+        "url": "../../runtime/faces/idle.svg",
+        "bytes": 344,
+        "sha256": "a57bc19256a0138fea353fcc411c80d70c3af3206d57c09a9b22b8b5ab44b5e2"
+      },
+      {
+        "id": "focused",
+        "url": "../../runtime/faces/focused.svg",
+        "bytes": 334,
+        "sha256": "b55f44d48b9c82efb149f2a58f7acaf251cc41e5567aa9f09df2f2c3627b7853"
+      },
+      {
+        "id": "happy",
+        "url": "../../runtime/faces/happy.svg",
+        "bytes": 365,
+        "sha256": "b328e33f20441da03f241fdc58dff025471f4fe250a59de52737400413d2b9b8"
+      },
+      {
+        "id": "surprised",
+        "url": "../../runtime/faces/surprised.svg",
+        "bytes": 476,
+        "sha256": "30da068133512a94d8c0145c1ad35e1a857845bb7f79aceced2f0824fe0919e5"
+      },
+      {
+        "id": "worried",
+        "url": "../../runtime/faces/worried.svg",
+        "bytes": 336,
+        "sha256": "af66da4816a79c22547cfb43811a69c7b967b01c6dd5305566d1dac3563b23ff"
+      },
+      {
+        "id": "dizzy",
+        "url": "../../runtime/faces/dizzy.svg",
+        "bytes": 358,
+        "sha256": "94002b67582f879837efa5f0845473beb35e7f2b932681ec9d44fff3903933b7"
+      }
+    ],
+    "geometry": {
+      "sourceSize": [512, 384],
+      "logicalRectPx": [48, 80, 416, 268.387096774194],
+      "pivotPx": [256, 348.387096774194],
+      "faceAnchorBodyUV": [0.5, 0.48],
+      "faceRenderWidthBodyFraction": 0.45,
+      "decorativeBoundsPx": [44, 20, 480, 356],
+      "silhouette": "Original outer body path and clipPath are byte-identical. The added cream path is inside the existing body clip, has no stroke, and does not alter the silhouette, pivot, anchor, logical rect or collision geometry."
+    }
+  },
+  "contrast": {
+    "basis": "WCAG 2.x sRGB relative-luminance formula on source flat colours; not a measured rendered-pixel or compliance claim.",
+    "faceStroke": "#42362a",
+    "rightEyeBackgroundBefore": "#494746",
+    "rightEyeBackgroundAfter": "#f9e8bd",
+    "beforeRatio": 1.2679,
+    "afterRatio": 9.653,
+    "sample": "Right-eye centre of the idle face at 80 px logical body width; body-only render sampled before compositing the shared face."
+  },
+  "evidence": {
+    "before": {
+      "path": "evidence/before-80-dpr1-dpr2.png",
+      "bytes": 59910,
+      "sha256": "5f3f4f8d43480f68766eab3bc9fb001bf699e61d3d2f92845dfac29b57eba6e5"
+    },
+    "after": {
+      "path": "evidence/after-80-dpr1-dpr2.png",
+      "bytes": 60530,
+      "sha256": "9fb30d1d06585799450bc8a96242c19636b5049db94ce3fda1d72a10b50e9862"
+    },
+    "reviewPages": [
+      "../../review/legibility/ct-art-004-evidence.html?variant=before",
+      "../../review/legibility/ct-art-004-evidence.html?variant=after",
+      "../../review/legibility/ct-art-004-compare.html"
+    ],
+    "capture": "OpenBot private browser, static 80 px canvas sheet, deviceScaleFactor 1, no overlay labels or crosshairs. DPR2 is a 2x canvas backing shown downsampled; this is not a device-DPR screenshot and makes no game-loop/rAF timing claim."
+  },
+  "checks": {
+    "xmlDecode": "Both files decoded by Chromium via HTMLImageElement in the review sheet; no separate XML parser run.",
+    "dimensions": "512x384 width, height and viewBox on the variant.",
+    "duplicateIds": "none; coat and body are unique in the variant.",
+    "externalReferences": "none; only local gradient/clipPath fragments.",
+    "alphaBounds": "not measured; no collision geometry derived from alpha.",
+    "allSixExpressions": "Rendered at 80 px and DPR1/2 in the evidence pages; idle, focused, happy, surprised, worried and dizzy all show both eyes/brows and mouth.",
+    "facesChanged": "none; no per-coat face variant is required for this fix.",
+    "beforeDefect": "The original narrow blaze left the right eye/right brow on #494746; the dark face stroke merged with the coat at 80 px."
+  },
+  "appearance": {
+    "reason": "The mask improves the right-eye/brow contrast, but the selected Grok tuxedo reference was independently reviewed by Architect as having dark eye surrounds and a cream muzzle/chest blaze, not a broad cream face. This variant therefore changes a visible marking and is offered as an option, not as a verified source-faithful correction.",
+    "scope": "Legibility option for the existing tuxedo coat; no silhouette, expression or optional-coat scope change.",
+    "approval": "Architect technical checks pass; integration is held for OG/user appearance review. Do not integrate until that decision is recorded. If rejected, the next step is a face-side variant that keeps the dark eye surrounds."
+  },
+  "review": {
+    "architectChecks": "../../../../design/checks/ct-art-004-review.json",
+    "architectStatus": "technical-local-variant-checked-appearance-review-required",
+    "ogRequest": "4329e760-4f39-488a-8857-eb17ae224da7",
+    "note": "Architect independently viewed ../../../comparison-02/grok-cats.jpg; the eye surrounds are dark with yellow eyes, so the broad cream mask is a visible marking change."
+  }
+}

@@ -1,0 +1,308 @@
+{
+   "approvalReference" : "4594228a-c9b8-47e0-91e7-dfe9d4dd6c06:approve",
+   "artStatus" : "provisional-selection-reopened",
+   "background" : {
+      "sourceSize" : [
+         576,
+         1024
+      ],
+      "url" : "background-main.svg"
+   },
+   "bodies" : [
+      {
+         "approvalReference" : "4594228a-c9b8-47e0-91e7-dfe9d4dd6c06:approve",
+         "decorativeBoundsPx" : [
+            44,
+            32,
+            468,
+            353
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "default",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "provenance" : "Native vector adaptation of user-selected Gemini concept cats-A.png; AI-assisted native paths authored by Studio",
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/default.svg"
+      },
+      {
+         "approvalReference" : "4594228a-c9b8-47e0-91e7-dfe9d4dd6c06:approve",
+         "decorativeBoundsPx" : [
+            44,
+            32,
+            468,
+            353
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "ginger",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "provenance" : "Native vector adaptation of user-selected Gemini concept cats-A.png; AI-assisted native paths authored by Studio",
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/ginger.svg"
+      },
+      {
+         "approvalReference" : "4594228a-c9b8-47e0-91e7-dfe9d4dd6c06:approve",
+         "decorativeBoundsPx" : [
+            44,
+            32,
+            468,
+            353
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "tuxedo",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "provenance" : "Native vector adaptation of user-selected Gemini concept cats-A.png; AI-assisted native paths authored by Studio",
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/tuxedo.svg"
+      },
+      {
+         "approvalReference" : "4594228a-c9b8-47e0-91e7-dfe9d4dd6c06:approve",
+         "decorativeBoundsPx" : [
+            44,
+            32,
+            468,
+            353
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "calico",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "provenance" : "Native vector adaptation of user-selected Gemini concept cats-A.png; AI-assisted native paths authored by Studio",
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/calico.svg"
+      }
+   ],
+   "faces" : [
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "idle",
+         "renderWidthBodyFraction" : 0.45,
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/idle.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "focused",
+         "renderWidthBodyFraction" : 0.45,
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/focused.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "happy",
+         "renderWidthBodyFraction" : 0.45,
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/happy.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "surprised",
+         "renderWidthBodyFraction" : 0.45,
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/surprised.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "worried",
+         "renderWidthBodyFraction" : 0.45,
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/worried.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "dizzy",
+         "renderWidthBodyFraction" : 0.45,
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/dizzy.svg"
+      }
+   ],
+   "files" : [
+      {
+         "bytes" : 875,
+         "url" : "bodies/default.svg"
+      },
+      {
+         "bytes" : 1005,
+         "url" : "bodies/ginger.svg"
+      },
+      {
+         "bytes" : 1007,
+         "url" : "bodies/tuxedo.svg"
+      },
+      {
+         "bytes" : 993,
+         "url" : "bodies/calico.svg"
+      },
+      {
+         "bytes" : 340,
+         "url" : "faces/idle.svg"
+      },
+      {
+         "bytes" : 371,
+         "url" : "faces/focused.svg"
+      },
+      {
+         "bytes" : 349,
+         "url" : "faces/happy.svg"
+      },
+      {
+         "bytes" : 397,
+         "url" : "faces/surprised.svg"
+      },
+      {
+         "bytes" : 366,
+         "url" : "faces/worried.svg"
+      },
+      {
+         "bytes" : 424,
+         "url" : "faces/dizzy.svg"
+      },
+      {
+         "bytes" : 431,
+         "url" : "background-main.svg"
+      },
+      {
+         "bytes" : 270,
+         "url" : "floor.svg"
+      },
+      {
+         "bytes" : 162,
+         "url" : "guide-shadow.svg"
+      },
+      {
+         "bytes" : 193,
+         "url" : "effects/star.svg"
+      },
+      {
+         "bytes" : 209,
+         "url" : "effects/puff.svg"
+      },
+      {
+         "bytes" : 281,
+         "url" : "icons/lock.svg"
+      },
+      {
+         "bytes" : 245,
+         "url" : "icons/mode.svg"
+      },
+      {
+         "bytes" : 224,
+         "url" : "icons/pause.svg"
+      },
+      {
+         "bytes" : 222,
+         "url" : "icons/selected.svg"
+      },
+      {
+         "bytes" : 246,
+         "url" : "icons/sound.svg"
+      },
+      {
+         "bytes" : 239,
+         "url" : "icons/warning.svg"
+      }
+   ],
+   "floor" : {
+      "topPx" : 4,
+      "url" : "floor.svg"
+   },
+   "manifestVersion" : 1,
+   "provider" : "Gemini through OpenRouter for concept source; native SVG adaptations for runtime",
+   "renderNotes" : "Draw faces at bodyUV anchor using center anchorPx; face width 0.45 logical body width. Prefix SVG internal IDs when inlining several bodies. No physics geometry from alpha. User approved native SVG production pass, including faces; gameplay integration still requires runtime validation.",
+   "selectionNote" : "User requested new actual Gemini and Grok comparison through OG message d348ea36-a933-4e10-9f2e-d66a1302fe86. Prior approval retained as history; no final art lock pending comparison.",
+   "sounds" : []
+}

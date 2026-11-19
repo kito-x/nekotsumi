@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CT-ART-004 tuxedo 80 px legibility — before / after</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 18px 22px 20px; background: #e9e3d7; color: #2b2a26;
+         font: 12px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 18px; margin: 0 0 3px; }
+  .sub { margin: 0 0 12px; color: #5d574d; font-size: 12px; max-width: 1120px; }
+  .cols { display: block; }
+  .panel { background: #f7f3ea; border: 1px solid #d8cfbf; border-radius: 10px; padding: 8px 12px 10px; margin-bottom: 10px; }
+  .panel.after { border-color: #b9a06d; }
+  h2 { font-size: 12px; letter-spacing: .05em; text-transform: uppercase; margin: 0 0 3px; color: #6a4a2f; }
+  .tag { font-size: 10.5px; color: #6b6357; margin: 0 0 8px; }
+  .row { display: flex; gap: 8px; }
+  figure { margin: 0; text-align: center; }
+  figcaption { font-size: 10px; color: #6b6357; margin-top: 3px; }
+  canvas { display: block; background: #f4eee2; border-radius: 4px; }
+  .dpr { font-size: 10px; letter-spacing: .04em; color: #7a6a53; margin: 8px 0 3px; }
+  .note { margin-top: 12px; background: #f7f3ea; border: 1px solid #d8cfbf; border-radius: 10px; padding: 9px 12px; color: #4d463c; font-size: 11.5px; }
+  .note strong { color: #2b2a26; }
+  code { font: 10.5px ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+</head>
+<body>
+<h1>CT-ART-004 — tuxedo face legibility at 80 px</h1>
+<p class="sub">Production-02 runtime art vs ct-art-004 tuxedo body variant · logical body width 80 CSS px · face 36 px (0.45 W) · no overlay labels, bounds or crosshairs · static canvas capture in OpenBot’s private browser at deviceScaleFactor 1; DPR2 is a 2× canvas backing downsampled for display, not a device-DPR screenshot. No game-loop/rAF timing claim.</p>
+
+<div class="cols">
+  <section class="panel">
+    <h2>Before — production-02</h2>
+    <p class="tag">runtime/bodies/tuxedo.svg · shared 128 px faces</p>
+    <div class="dpr">80 px body · DPR 1 (1× backing)</div>
+    <div class="row" id="before-1"></div>
+    <div class="dpr">80 px body · DPR 2 (2× backing)</div>
+    <div class="row" id="before-2"></div>
+  </section>
+
+  <section class="panel after">
+    <h2>After — ct-art-004 mask</h2>
+    <p class="tag">variants/ct-art-004/bodies/tuxedo.svg · same shared faces</p>
+    <div class="dpr">80 px body · DPR 1 (1× backing)</div>
+    <div class="row" id="after-1"></div>
+    <div class="dpr">80 px body · DPR 2 (2× backing)</div>
+    <div class="row" id="after-2"></div>
+  </section>
+</div>
+
+<p class="note" id="note">Measuring…</p>
+
+<script>
+const FACES = ['idle', 'focused', 'happy', 'surprised', 'worried', 'dizzy'];
+const BODY_BEFORE = '../../runtime/bodies/tuxedo.svg';
+const BODY_AFTER = '../../variants/ct-art-004/bodies/tuxedo.svg';
+const FACE_BASE = '../../runtime/faces/';
+const LOGICAL_W = 416, LOGICAL_H = 416 / 1.55;
+const PIVOT = [256, 80 + LOGICAL_H];
+const FACE_UV = [0.5, 0.48];
+const FACE_FRACTION = 0.45;
+const CELL_W = 104, CELL_H = 86, BASELINE = 78;
+
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('failed ' + url));
+    img.src = url;
+  });
+}
+
+function drawCat(canvas, body, face, bodyWidth, dpr) {
+  canvas.style.width = CELL_W + 'px';
+  canvas.style.height = CELL_H + 'px';
+  canvas.width = Math.round(CELL_W * dpr);
+  canvas.height = Math.round(CELL_H * dpr);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const scale = bodyWidth / LOGICAL_W;
+  const cx = CELL_W / 2;
+  const bottom = BASELINE;
+  const faceSize = bodyWidth * FACE_FRACTION;
+  const faceCY = bottom - (PIVOT[1] - (80 + FACE_UV[1] * LOGICAL_H)) * scale;
+  ctx.save();
+  ctx.translate(cx, bottom);
+  ctx.drawImage(body, -PIVOT[0] * scale, -PIVOT[1] * scale, 512 * scale, 384 * scale);
+  ctx.restore();
+  ctx.drawImage(face, cx - faceSize / 2, faceCY - faceSize / 2, faceSize, faceSize);
+  return { ctx, faceSize, cx, faceCY, scale };
+}
+
+function addCell(row, body, face, dpr, id) {
+  const fig = document.createElement('figure');
+  const canvas = document.createElement('canvas');
+  fig.append(canvas);
+  const cap = document.createElement('figcaption');
+  cap.textContent = id;
+  fig.append(cap);
+  row.append(fig);
+  return drawCat(canvas, body, face, 80, dpr);
+}
+
+function sampleBody(body, x, y) {
+  const canvas = document.createElement('canvas');
+  canvas.width = CELL_W; canvas.height = CELL_H;
+  const ctx = canvas.getContext('2d');
+  const scale = 80 / LOGICAL_W;
+  ctx.save();
+  ctx.translate(CELL_W / 2, BASELINE);
+  ctx.drawImage(body, -PIVOT[0] * scale, -PIVOT[1] * scale, 512 * scale, 384 * scale);
+  ctx.restore();
+  return Array.from(ctx.getImageData(Math.round(x), Math.round(y), 1, 1).data);
+}
+
+function srgbToLinear(v) {
+  const c = v / 255;
+  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+}
+function lum(rgb) {
+  return 0.2126 * srgbToLinear(rgb[0]) + 0.7152 * srgbToLinear(rgb[1]) + 0.0722 * srgbToLinear(rgb[2]);
+}
+function contrast(a, b) {
+  const la = lum(a), lb = lum(b);
+  return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+function hex(rgb) {
+  return '#' + rgb.slice(0, 3).map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase();
+}
+
+(async () => {
+  const [before, after] = await Promise.all([loadImage(BODY_BEFORE), loadImage(BODY_AFTER)]);
+  const faces = {};
+  await Promise.all(FACES.map(async (id) => { faces[id] = await loadImage(FACE_BASE + id + '.svg'); }));
+
+  for (const dpr of [1, 2]) {
+    for (const id of FACES) {
+      addCell(document.getElementById('before-' + dpr), before, faces[id], dpr, id);
+      addCell(document.getElementById('after-' + dpr), after, faces[id], dpr, id);
+    }
+  }
+
+  // Right-eye centre at 80 px, from the idle face anchor geometry.
+  const scale = 80 / LOGICAL_W;
+  const faceCX = CELL_W / 2;
+  const faceCY = BASELINE - (PIVOT[1] - (80 + FACE_UV[1] * LOGICAL_H)) * scale;
+  const eyeX = faceCX + (90 - 64) / 128 * (80 * FACE_FRACTION);
+  const eyeY = faceCY + (48 - 64) / 128 * (80 * FACE_FRACTION);
+  const b = sampleBody(before, eyeX, eyeY);
+  const a = sampleBody(after, eyeX, eyeY);
+  const stroke = [0x42, 0x36, 0x2a];
+
+  document.getElementById('note').innerHTML =
+    '<strong>Right-eye background sample at 80 px</strong> — before <code>' + hex(b) + '</code>, after <code>' + hex(a) +
+    '</code>. Source face stroke <code>#42362A</code>: flat-colour contrast before <code>' + contrast(b, stroke).toFixed(2) +
+    ':1</code>, after <code>' + contrast(a, stroke).toFixed(2) + ':1</code>. ' +
+    'Source-colour calculation, not a pixel-compliance measurement; antialiasing at 36 px is visible. ' +
+    'Geometry unchanged: 512×384 source, logical 416×268.39, pivot (256,348.39), face UV (0.50,0.48), 0.45 W.';
+})().catch((err) => {
+  document.getElementById('note').textContent = 'ERROR: ' + err.message;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+   "created" : 0,
+   "data" : [
+      {
+         "media_type" : "image/png"
+      }
+   ],
+   "usage" : {
+      "completion_tokens" : 1309,
+      "completion_tokens_details" : {
+         "image_tokens" : 1290,
+         "reasoning_tokens" : 0
+      },
+      "cost" : 0.0388123,
+      "cost_details" : {
+         "upstream_inference_completions_cost" : 0.0387475,
+         "upstream_inference_cost" : 0.0388123,
+         "upstream_inference_prompt_cost" : 6.48e-05
+      },
+      "is_byok" : false,
+      "prompt_tokens" : 216,
+      "prompt_tokens_details" : {
+         "audio_tokens" : 0,
+         "cache_write_tokens" : 0,
+         "cached_tokens" : 0,
+         "video_tokens" : 0
+      },
+      "total_tokens" : 1525
+   },
+   "verification" : {
+      "bytes" : 884363,
+      "completedUnix" : 1794787935,
+      "endpoint" : "https://openrouter.ai/api/v1/images",
+      "height" : 1344,
+      "model" : "google/gemini-2.5-flash-image",
+      "output" : "gemini-sunroom.png",
+      "provider" : "Google Gemini via OpenRouter",
+      "samePromptAs" : "grok-sunroom.request.json",
+      "sha256" : "4411647d8358e93a3023830293bee94b132cca63a2b8793354d141b7d1c66d7b",
+      "sourceRequest" : "gemini-sunroom.request.json",
+      "startedUnix" : 1794787927,
+      "status" : "provisional-comparison-only",
+      "width" : 768
+   }
+}

@@ -1,0 +1,6 @@
+{
+   "aspect_ratio" : "9:16",
+   "model" : "google/gemini-2.5-flash-image",
+   "n" : 1,
+   "prompt" : "Create an original portrait 2D background option for Cat Tower, a cute mobile browser cat-stacking game. Cozy sunroom at dawn, warm buttercream and pale peach wall washed in soft golden light. Muted sage botanical hints at the extreme lower outside edges and the faint suggestion of a rounded window only at the upper outside edge. Rounded friendly storybook illustration, soft paper warmth, restrained flat shading, coordinated with pastel loaf cats outlined in dark cocoa. Straight-on orthographic view, not a perspective room. Approximately 95 percent of the playfield width must remain visually quiet and low contrast for a tower of moving cats. Entire central field is a soft uncluttered cream wash; no hard architectural lines or window frames across it. Keep top area quiet for later HTML controls. NO cats, characters, floor, platform, shelves, furniture, obstacles, shadows of cats, UI, score, text, logos or watermark. Platform will be a separately drawn runtime asset. Full bleed portrait illustration. This is a background concept source for review, not a final cropped runtime export."
+}

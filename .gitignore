@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.test-build/
+*.tsbuildinfo
+.toolchain/
+/app/preview.log
+
+# Provider response logs can contain cookies and session metadata.
+*.response-headers.txt

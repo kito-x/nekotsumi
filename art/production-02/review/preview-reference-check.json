@@ -1,0 +1,23 @@
+{
+   "files" : [
+      {
+         "brokenReferences" : [],
+         "bytes" : 21048,
+         "duplicateIds" : [],
+         "fragmentReferences" : 22,
+         "path" : "review/preview.html",
+         "sha256" : "d5841ec0c57044ebef05c6ed7688f588fa0a5745a2430b1ba9ea745f7338c3de",
+         "uniqueIds" : 22
+      },
+      {
+         "brokenReferences" : [],
+         "bytes" : 10156,
+         "duplicateIds" : [],
+         "fragmentReferences" : 10,
+         "path" : "review/contact-sheet.svg",
+         "sha256" : "94878a107555089d1cacd15229ca06b7b40fcd7f87350ae9aa1ecd62f3a1bf46",
+         "uniqueIds" : 10
+      }
+   ],
+   "method" : "static attribute/reference scan; not XML parsing or rendering"
+}

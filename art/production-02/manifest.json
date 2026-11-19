@@ -1,0 +1,296 @@
+{
+   "background" : {
+      "sourceSize" : [
+         576,
+         1008
+      ],
+      "space" : "screen",
+      "url" : "background-main.svg"
+   },
+   "bodies" : [
+      {
+         "boundsConvention" : "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha",
+         "decorativeBoundsPx" : [
+            44,
+            20,
+            480,
+            356
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "default",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/default.svg"
+      },
+      {
+         "boundsConvention" : "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha",
+         "decorativeBoundsPx" : [
+            44,
+            20,
+            480,
+            356
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "ginger",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/ginger.svg"
+      },
+      {
+         "boundsConvention" : "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha",
+         "decorativeBoundsPx" : [
+            44,
+            20,
+            480,
+            356
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "tuxedo",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/tuxedo.svg"
+      },
+      {
+         "boundsConvention" : "xMin,yMin,xMax,yMax; conservative authored envelope, NOT measured alpha",
+         "decorativeBoundsPx" : [
+            44,
+            20,
+            480,
+            356
+         ],
+         "faceAnchorBodyUV" : [
+            0.5,
+            0.48
+         ],
+         "id" : "calico",
+         "logicalRectPx" : [
+            48,
+            80,
+            416,
+            268.387096774194
+         ],
+         "pivotPx" : [
+            256,
+            348.387096774194
+         ],
+         "sourceSize" : [
+            512,
+            384
+         ],
+         "url" : "bodies/calico.svg"
+      }
+   ],
+   "checks" : {
+      "alpha" : "not measured; no local raster decoder",
+      "appearance" : "pending review; flatter native vectors and quieter background simplify raster texture and scenery",
+      "gameIntegration" : "pending Developer",
+      "xml" : "pending"
+   },
+   "faceRenderWidthBodyFraction" : 0.45,
+   "faces" : [
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "idle",
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/idle.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "focused",
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/focused.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "happy",
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/happy.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "surprised",
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/surprised.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "worried",
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/worried.svg"
+      },
+      {
+         "anchorPx" : [
+            64,
+            64
+         ],
+         "id" : "dizzy",
+         "sourceSize" : [
+            128,
+            128
+         ],
+         "url" : "faces/dizzy.svg"
+      }
+   ],
+   "files" : [
+      {
+         "bytes" : 1258,
+         "sha256" : "7f1614a93704fbdba570c7c1d0343913ee6151cfef80b03931b0e0773e11780a",
+         "url" : "bodies/default.svg"
+      },
+      {
+         "bytes" : 1558,
+         "sha256" : "792eb85690aa6747a56dbc140a0341e6374635af85aee683485deeb1711b99e2",
+         "url" : "bodies/ginger.svg"
+      },
+      {
+         "bytes" : 1422,
+         "sha256" : "6759a36ac0a38f7cda377ce71ca7a6c4fbb4102bbf436be4c8c27da6aeaf245a",
+         "url" : "bodies/tuxedo.svg"
+      },
+      {
+         "bytes" : 1560,
+         "sha256" : "65692aa81240d857db97675a3c3522358cff78318e6692b15c24b2eb736d96f6",
+         "url" : "bodies/calico.svg"
+      },
+      {
+         "bytes" : 344,
+         "sha256" : "a57bc19256a0138fea353fcc411c80d70c3af3206d57c09a9b22b8b5ab44b5e2",
+         "url" : "faces/idle.svg"
+      },
+      {
+         "bytes" : 334,
+         "sha256" : "b55f44d48b9c82efb149f2a58f7acaf251cc41e5567aa9f09df2f2c3627b7853",
+         "url" : "faces/focused.svg"
+      },
+      {
+         "bytes" : 365,
+         "sha256" : "b328e33f20441da03f241fdc58dff025471f4fe250a59de52737400413d2b9b8",
+         "url" : "faces/happy.svg"
+      },
+      {
+         "bytes" : 476,
+         "sha256" : "30da068133512a94d8c0145c1ad35e1a857845bb7f79aceced2f0824fe0919e5",
+         "url" : "faces/surprised.svg"
+      },
+      {
+         "bytes" : 336,
+         "sha256" : "af66da4816a79c22547cfb43811a69c7b967b01c6dd5305566d1dac3563b23ff",
+         "url" : "faces/worried.svg"
+      },
+      {
+         "bytes" : 358,
+         "sha256" : "94002b67582f879837efa5f0845473beb35e7f2b932681ec9d44fff3903933b7",
+         "url" : "faces/dizzy.svg"
+      },
+      {
+         "bytes" : 842,
+         "sha256" : "94eda0414212c14ac979092a7154109908c565483268337314bdeaae8da26d72",
+         "url" : "background-main.svg"
+      },
+      {
+         "bytes" : 300,
+         "sha256" : "eaf910dd0cb9c6a59a9699adc456a8ad77cff28ba264d0f3899ec9ca944dc938",
+         "url" : "floor.svg"
+      }
+   ],
+   "floor" : {
+      "centerX" : 256,
+      "physicalWidth" : 4.4,
+      "sourceSize" : [
+         512,
+         128
+      ],
+      "topLineY" : 22,
+      "url" : "floor.svg"
+   },
+   "provenance" : "New AI-assisted Studio-authored native vector interpretation from selected Grok cat sheet and ORIGINAL Gemini Sunroom. Not provider-generated transparent exports. No provider calls. Original receipts unchanged.",
+   "rights" : "Provider/source provenance recorded; commercial-use rights not independently audited.",
+   "runtimeRoot" : "runtime/",
+   "selectionApproval" : "4d1b1697-f83d-4b3c-8f54-bf2b9fe7b9b4:select",
+   "sources" : [
+      {
+         "path" : "../comparison-02/grok-cats.jpg",
+         "sha256" : "986bd622fe6e0bb4a5beee45b5ead4e11d76f79631100574fd91b28003a69017"
+      },
+      {
+         "path" : "../review-01/background-A-sunroom.png",
+         "sha256" : "95d93b62e8308741978c47bcfa3ab6bd753c5af7044dfbdcda399264d602162f"
+      }
+   ],
+   "status" : "awaiting-adaptation-appearance-and-technical-review"
+}

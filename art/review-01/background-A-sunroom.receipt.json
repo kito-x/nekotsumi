@@ -1,0 +1,38 @@
+{
+   "usage" : {
+      "total_tokens" : 1497,
+      "cost_details" : {
+         "upstream_inference_cost" : 0.0387621,
+         "upstream_inference_completions_cost" : 0.0387,
+         "upstream_inference_prompt_cost" : 6.21e-05
+      },
+      "completion_tokens_details" : {
+         "image_tokens" : 1290,
+         "reasoning_tokens" : 0
+      },
+      "prompt_tokens" : 207,
+      "completion_tokens" : 1290,
+      "is_byok" : false,
+      "cost" : 0.0387621,
+      "prompt_tokens_details" : {
+         "cache_write_tokens" : 0,
+         "cached_tokens" : 0,
+         "audio_tokens" : 0,
+         "video_tokens" : 0
+      }
+   },
+   "verification" : {
+      "status" : "provisional",
+      "model" : "google/gemini-2.5-flash-image",
+      "provider" : "OpenRouter",
+      "height" : 1344,
+      "bytes" : 1090006,
+      "width" : 768
+   },
+   "created" : 0,
+   "data" : [
+      {
+         "media_type" : "image/png"
+      }
+   ]
+}

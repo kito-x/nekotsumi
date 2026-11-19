@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <title>Nekotsumi — art diagnostics</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/diagnostics.css" />
+  </head>
+  <body class="diagnostic-body">
+    <main class="diagnostic-page">
+      <header class="diagnostic-header">
+        <p class="eyebrow">Local only · provisional technical check</p>
+        <h1>Nekotsumi art diagnostics</h1>
+        <p>
+          Production-02 runtime SVGs. Appearance approval is separate from technical validation.
+          All four coats and six faces are drawn at 80 CSS px logical body width.
+        </p>
+        <p id="diag-status" class="diag-status" role="status">Loading assets…</p>
+        <nav class="diag-nav" aria-label="Diagnostic options">
+          <a href="./diagnostics.html?dpr=1" id="dpr1-link">Forced DPR 1</a>
+          <a href="./diagnostics.html?dpr=2" id="dpr2-link">Forced DPR 2</a>
+          <a href="./?fault=missing-face">Missing face fault</a>
+          <a href="./?fault=decode-body">Decode fault</a>
+          <a href="./?fault=invalid-manifest">Invalid manifest</a>
+          <a href="./">Back to game</a>
+        </nav>
+      </header>
+      <div class="diag-canvas-wrap">
+        <canvas id="diag-grid" aria-label="Four coats by six expressions diagnostic grid"></canvas>
+      </div>
+      <div class="diag-canvas-wrap">
+        <canvas id="diag-projection" aria-label="Floor and travel projection diagnostic"></canvas>
+      </div>
+      <p class="diag-note">
+        Overlays mark the logical rectangle, bottom-center pivot, and face center. Bounds are
+        advisory authored envelopes, not alpha measurements. Emulated/forced DPR is not a physical-device claim.
+      </p>
+    </main>
+    <script type="module" src="./src/diag.ts"></script>
+  </body>
+</html>

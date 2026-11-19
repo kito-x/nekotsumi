@@ -1,0 +1,65 @@
+{
+  "review": "CT-DEV-002",
+  "date": "2026-11-16",
+  "status": "correction-pending",
+  "tests": {
+    "exit": 0,
+    "pass": 64,
+    "fail": 0,
+    "durationMs": 142.35132,
+    "includesTypecheck": true
+  },
+  "build": {
+    "exit": 0,
+    "bytes": 81196,
+    "main": "main-pcycm239.js",
+    "sha256": "fcf9676ca7157ac0ac4e3b5bae59729de0415d32b3543bed5419531075481c3e"
+  },
+  "browser": {
+    "route": "OpenBot private browser",
+    "viewport": [
+      1265,
+      715
+    ],
+    "dpr": 1,
+    "normal": "headless interruption pause at tick0, focus Resume",
+    "capture": {
+      "artReady": true,
+      "assetErrors": [],
+      "stable": {
+        "score": 15,
+        "height": 1
+      },
+      "nextSpawn": 2,
+      "failure": "MISS_TOP",
+      "results": true
+    },
+    "stall": {
+      "injected": "unresolved optional manifest fetch in same-origin srcdoc iframe",
+      "startDisabled": true,
+      "label": "Loading art…",
+      "engineBootstrapped": false,
+      "removedIframe": true
+    }
+  },
+  "flatSourceColorContrast": {
+    "faceStroke": "#42362a",
+    "tuxedo": "#494746",
+    "ratio": 1.2678999928848151,
+    "renderedPixelsMeasured": false
+  },
+  "validator": {
+    "field": "faceRenderWidthBodyFraction",
+    "NaNAccepted": true
+  },
+  "writes": [
+    "app/.test-build/ regenerated",
+    "app/dist/ rebuilt",
+    "design documents and this evidence"
+  ],
+  "dispatch": {
+    "developer": "87a4794a-5d8d-4248-adae-eae823dbdb90",
+    "studio": "9e8eb12e-59ba-43f2-a2fe-e703103b0e01",
+    "playtester": "ca079a7f-6742-4e34-8222-5ebd100bb5ed"
+  }
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CT-ART-004 80 px evidence</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 16px 18px; background: #e9e3d7; color: #2b2a26;
+         font: 12px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  #card { display: inline-block; background: #f7f3ea; border: 1px solid #d8cfbf; border-radius: 10px; padding: 12px 14px 14px; }
+  h1 { font-size: 17px; margin: 0 0 3px; }
+  .sub { margin: 0 0 10px; color: #5d574d; font-size: 11.5px; max-width: 700px; }
+  .dpr { font-size: 10px; letter-spacing: .04em; color: #7a6a53; margin: 8px 0 3px; }
+  .row { display: flex; gap: 8px; }
+  figure { margin: 0; text-align: center; }
+  figcaption { font-size: 10px; color: #6b6357; margin-top: 3px; }
+  canvas { display: block; background: #f4eee2; border-radius: 4px; }
+  code { font: 10.5px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .note { margin-top: 9px; font-size: 11px; color: #4d463c; max-width: 690px; }
+</style>
+</head>
+<body>
+<div id="card" role="img" aria-label="CT-ART-004 tuxedo 80 px evidence sheet">
+  <h1 id="title">CT-ART-004 — tuxedo 80 px</h1>
+  <p class="sub" id="sub"></p>
+  <div class="dpr" id="dpr1-label">80 px body · DPR 1 (canvas backing 1×)</div>
+  <div class="row" id="row1"></div>
+  <div class="dpr" id="dpr2-label">80 px body · DPR 2 (canvas backing 2×)</div>
+  <div class="row" id="row2"></div>
+  <p class="note" id="note">Measuring…</p>
+</div>
+<script>
+const params = new URLSearchParams(location.search);
+const VARIANT = params.get('variant') === 'after' ? 'after' : 'before';
+const ONLY_ROW = params.get('row');
+const FACES = ['idle', 'focused', 'happy', 'surprised', 'worried', 'dizzy'];
+const BODY_URL = VARIANT === 'after'
+  ? '../../variants/ct-art-004/bodies/tuxedo.svg'
+  : '../../runtime/bodies/tuxedo.svg';
+const FACE_BASE = '../../runtime/faces/';
+const LOGICAL_W = 416, LOGICAL_H = 416 / 1.55;
+const PIVOT = [256, 80 + LOGICAL_H];
+const FACE_UV = [0.5, 0.48];
+const FACE_FRACTION = 0.45;
+const CELL_W = 104, CELL_H = 86, BASELINE = 78;
+
+document.getElementById('title').textContent = 'CT-ART-004 — tuxedo ' + (VARIANT === 'after' ? 'AFTER' : 'BEFORE') + ' · 80 px';
+document.getElementById('sub').textContent = (VARIANT === 'after'
+  ? 'ct-art-004 tuxedo body variant · shared production-02 128 px faces · no overlay labels or crosshairs'
+  : 'production-02 runtime/bodies/tuxedo.svg · shared production-02 128 px faces · no overlay labels or crosshairs') + ' · browser devicePixelRatio ' + window.devicePixelRatio;
+document.title = document.getElementById('title').textContent;
+
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('failed ' + url));
+    img.src = url;
+  });
+}
+function drawCat(canvas, body, face, dpr) {
+  canvas.style.width = CELL_W + 'px';
+  canvas.style.height = CELL_H + 'px';
+  canvas.width = Math.round(CELL_W * dpr);
+  canvas.height = Math.round(CELL_H * dpr);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const scale = 80 / LOGICAL_W;
+  const cx = CELL_W / 2, bottom = BASELINE;
+  const faceSize = 80 * FACE_FRACTION;
+  const faceCY = bottom - (PIVOT[1] - (80 + FACE_UV[1] * LOGICAL_H)) * scale;
+  ctx.save();
+  ctx.translate(cx, bottom);
+  ctx.drawImage(body, -PIVOT[0] * scale, -PIVOT[1] * scale, 512 * scale, 384 * scale);
+  ctx.restore();
+  ctx.drawImage(face, cx - faceSize / 2, faceCY - faceSize / 2, faceSize, faceSize);
+}
+function addCell(row, body, face, dpr, id) {
+  const fig = document.createElement('figure');
+  const canvas = document.createElement('canvas');
+  fig.append(canvas);
+  const cap = document.createElement('figcaption');
+  cap.textContent = id;
+  fig.append(cap);
+  row.append(fig);
+  drawCat(canvas, body, face, dpr);
+}
+function srgbToLinear(v) {
+  const c = v / 255;
+  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+}
+function lum(rgb) {
+  return 0.2126 * srgbToLinear(rgb[0]) + 0.7152 * srgbToLinear(rgb[1]) + 0.0722 * srgbToLinear(rgb[2]);
+}
+function contrast(a, b) {
+  const la = lum(a), lb = lum(b);
+  return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+function hex(rgb) {
+  return '#' + rgb.slice(0, 3).map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase();
+}
+function sampleBody(body, x, y) {
+  const canvas = document.createElement('canvas');
+  canvas.width = CELL_W; canvas.height = CELL_H;
+  const ctx = canvas.getContext('2d');
+  const scale = 80 / LOGICAL_W;
+  ctx.save();
+  ctx.translate(CELL_W / 2, BASELINE);
+  ctx.drawImage(body, -PIVOT[0] * scale, -PIVOT[1] * scale, 512 * scale, 384 * scale);
+  ctx.restore();
+  return Array.from(ctx.getImageData(Math.round(x), Math.round(y), 1, 1).data);
+}
+
+(async () => {
+  const body = await loadImage(BODY_URL);
+  const faces = {};
+  await Promise.all(FACES.map(async (id) => { faces[id] = await loadImage(FACE_BASE + id + '.svg'); }));
+  if (ONLY_ROW === '2') { document.getElementById('dpr1-label').style.display = 'none'; document.getElementById('row1').style.display = 'none'; }
+  if (ONLY_ROW === '1') { document.getElementById('dpr2-label').style.display = 'none'; document.getElementById('row2').style.display = 'none'; }
+  if (window.devicePixelRatio === 2 && ONLY_ROW !== '1') document.getElementById('dpr2-label').textContent = '80 px body · DPR 2 (canvas backing 2×; capture may be downsampled)';
+  for (const [rowId, dpr] of [['row1', 1], ['row2', 2]]) {
+    for (const id of FACES) addCell(document.getElementById(rowId), body, faces[id], dpr, id);
+  }
+  const scale = 80 / LOGICAL_W;
+  const faceCX = CELL_W / 2;
+  const faceCY = BASELINE - (PIVOT[1] - (80 + FACE_UV[1] * LOGICAL_H)) * scale;
+  const eyeX = faceCX + (90 - 64) / 128 * (80 * FACE_FRACTION);
+  const eyeY = faceCY + (48 - 64) / 128 * (80 * FACE_FRACTION);
+  const b = sampleBody(body, eyeX, eyeY);
+  const stroke = [0x42, 0x36, 0x2a];
+  document.getElementById('note').innerHTML =
+    'Right-eye background sample <code>' + hex(b) + '</code>; face stroke <code>#42362A</code> flat-colour contrast <code>' +
+    contrast(b, stroke).toFixed(2) + ':1</code>. Source-colour calculation, not a pixel-compliance measurement. ' +
+    'Geometry: 512×384, logical 416×268.39, pivot (256,348.39), face UV (0.50,0.48), 0.45 W.';
+  document.body.dataset.ready = '1';
+})().catch((err) => {
+  document.getElementById('note').textContent = 'ERROR: ' + err.message;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+   "created" : 0,
+   "data" : [
+      {
+         "media_type" : "image/png"
+      }
+   ],
+   "usage" : {
+      "completion_tokens" : 1290,
+      "completion_tokens_details" : {
+         "image_tokens" : 1290,
+         "reasoning_tokens" : 0
+      },
+      "cost" : 0.0387819,
+      "cost_details" : {
+         "upstream_inference_completions_cost" : 0.0387,
+         "upstream_inference_cost" : 0.0387819,
+         "upstream_inference_prompt_cost" : 8.19e-05
+      },
+      "is_byok" : false,
+      "prompt_tokens" : 273,
+      "prompt_tokens_details" : {
+         "audio_tokens" : 0,
+         "cache_write_tokens" : 0,
+         "cached_tokens" : 0,
+         "video_tokens" : 0
+      },
+      "total_tokens" : 1563
+   },
+   "verification" : {
+      "bytes" : 948072,
+      "completedUnix" : 1794787936,
+      "endpoint" : "https://openrouter.ai/api/v1/images",
+      "height" : 1024,
+      "model" : "google/gemini-2.5-flash-image",
+      "output" : "gemini-cats.png",
+      "provider" : "Google Gemini via OpenRouter",
+      "samePromptAs" : "grok-cats.request.json",
+      "sha256" : "60f2a320565a44e76d6a819b15b56e32a8cad6bd8bd5a752fce160a960511a5c",
+      "sourceRequest" : "gemini-cats.request.json",
+      "startedUnix" : 1794787927,
+      "status" : "provisional-comparison-only",
+      "width" : 1024
+   }
+}

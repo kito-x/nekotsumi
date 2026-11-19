@@ -1,0 +1,27 @@
+{
+  "task": "CT-ART-004",
+  "date": "2026-11-16",
+  "reviewer": "Architect",
+  "staticChecks": "pass",
+  "originalBodyAndFacesPreserved": true,
+  "geometryUnchanged": true,
+  "addedPaths": 1,
+  "variantBytes": 1586,
+  "variantSha256": "5fb79154049506515fb205226a15168ea8904ba5ea05282c843bc48958590cfb",
+  "sourceColorContrast": {
+    "before": 1.2678999928848151,
+    "after": 9.65299917454153,
+    "renderedPixelsMeasured": false
+  },
+  "visualReview": "Supplied before/after80px sheets show legibility improvement. Selected Grok reference has dark eye surrounds, not cream mask.",
+  "dprLimit": "2x canvas backing shown downsampled; actual device-DPR2 integration not independently checked",
+  "status": "accepted-for-integration",
+  "integration": "queued Developer task ecb4881c-606e-4c89-87d1-e03042aa982d; rendered app verification pending",
+  "appearanceApproval": {
+    "card": "95e0f689-310e-4984-b68d-a8588f192e1a",
+    "action": "approve",
+    "relay": "3691f833-14cc-49c9-a083-d39f777922a9",
+    "scope": "tuxedo cream face-mask variant only",
+    "independentlyInspectedCard": false
+  }
+}

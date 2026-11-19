@@ -1,0 +1,6 @@
+{
+   "prompt" : "Use case: stylized-concept. Asset type: portrait 2D background option A for cute mobile cat-stacking game Cat Tower. Cozy pastel sunroom, warm buttercream wall, peach dawn light, small sage plants only at extreme lower side edges, a tall softly outlined arched window in upper corner, very pale distant clouds. Polished flat illustration with soft paper warmth, dark cocoa gentle outlines only on peripheral props. A simple horizontal honey-wood base platform at 88 percent image height across the image. Preserve a completely empty very low-contrast cream central play corridor from x=20 percent to x=80 percent and from y=12 percent to y=86 percent; no furniture, lines, hanging objects, foreground objects or decorations in that lane. Empty top strip for later interface. No cats, no characters, no text, no buttons, no score, no watermark. Straight-on orthographic camera. Gentle cozy mood, compatible with rounded pastel loaf-cat stickers. Full bleed finished illustration.",
+   "n" : 1,
+   "model" : "google/gemini-2.5-flash-image",
+   "aspect_ratio" : "9:16"
+}

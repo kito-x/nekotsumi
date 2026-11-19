@@ -1,0 +1,10 @@
+{"task":"CT-DEV-002L","reviewer":"Cat Tower Architect","date":"2026-11-16","verdict":"accepted; M2 closed after CT-TEST-002 pass","independentRetest":"16926fde-825b-4c91-a9da-205ca5d4be52",
+"developerResult":"c523cb29-4d84-4354-94ce-1285378a2e09",
+"build":{"index.html":"612bc2167a6a2fe0b02a722114dd376bb1a61d4edf1230f308f4c3b8a9e148af","main-DBY5zVeB.js":"1fad142c905d6425d5b1a845f05ff1b50ac01cad8f555aa9c82d3a0198c2ab50","scene-sHgGVcMT.css":"4d14d2768ba807e7d4aee576ff110c635c202c59cb05eca1875b693707cdd9f9"},
+"tests":{"command":"npm test","exit":0,"pass":67,"fail":0,"ms":152.2},
+"layout":{"320x568":{"readout":[436,494],"drop":[498,562],"skip":[436,500],"resultsBottom":462.1,"startBottom":521.3,"scrollH":568,"scrollW":320},
+"390x844":{"readout":[712,770],"drop":[774,838],"skip":[712,776],"resultsBottom":430.1,"startBottom":487.5,"scrollH":844,"scrollW":390},
+"844x390":{"readout":[204.5,268.5],"drop":[272.5,336.5],"skip":[204.5,268.5],"resultsBottom":198,"startBottom":202.7,"scrollH":390,"scrollW":844},
+"1280x720":{"readout":[578,636],"drop":[640,708],"skip":[578,642],"resultsBottom":507.9,"startBottom":516.5,"scrollH":720,"scrollW":1280}},
+"collapseCanvasUnchanged":true,"zeroCatCopy":"3.20 left of the floor center · overlap 12% · Will miss the platform",
+"notConfirmed":["normal-mode resize pause (headless frame-gap pause masked source)","physical devices","real 200% zoom","screen reader","Firefox/Safari","real frame timing"]}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cat Tower M4B renderer audit</title>
+    <style>
+      html, body { margin: 0; min-height: 100%; background: #101513; color: #f5f1e8; font: 13px/1.4 ui-monospace, monospace; }
+      #stage { position: relative; width: 100vw; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+      #stage canvas { display: block; }
+      #caption { position: absolute; top: 8px; left: 8px; max-width: calc(100vw - 16px); padding: 6px 8px; background: rgba(16,21,19,.78); border: 1px solid #8d9b88; border-radius: 6px; pointer-events: none; white-space: pre-wrap; }
+      #status { padding: 12px; white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <div id="stage"><p id="caption">Loading audit renderer…</p></div>
+    <pre id="status">Loading art…</pre>
+    <script type="module" src="./audit.ts"></script>
+  </body>
+</html>

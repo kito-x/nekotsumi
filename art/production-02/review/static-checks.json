@@ -1,0 +1,73 @@
+{
+   "checks" : [
+      {
+         "bytesAndHash" : "pass",
+         "url" : "bodies/default.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "bodies/ginger.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "bodies/tuxedo.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "bodies/calico.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "faces/idle.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "faces/focused.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "faces/happy.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "faces/surprised.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "faces/worried.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "faces/dizzy.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "background-main.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      },
+      {
+         "bytesAndHash" : "pass",
+         "url" : "floor.svg",
+         "wrapperAndExternalReferenceScan" : "pass"
+      }
+   ],
+   "defaultAndFacesBytes" : 3471,
+   "notChecked" : [
+      "XML parser unavailable: wrapper scan is not parsing",
+      "No local raster renderer: painted extents/alpha not measured",
+      "No browser/game decoding, face alignment, 80px/DPR or portrait/landscape check",
+      "Adaptation appearance awaits review"
+   ],
+   "status" : "static inventory passed; visual and runtime review pending",
+   "totalBytes" : 9153
+}

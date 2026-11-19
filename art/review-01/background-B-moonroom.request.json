@@ -1,0 +1,6 @@
+{
+   "n" : 1,
+   "aspect_ratio" : "9:16",
+   "prompt" : "Use case: stylized-concept. Asset type: portrait 2D background option B for cute mobile cat-stacking game Cat Tower. Quiet dreamy moonlit attic in powder lavender and muted blue, cream crescent moon and a few tiny stars only at upper outside edges, softly suggested rounded window in far upper corner, one tiny muted plant at lower side edge. Polished flat illustration, soft paper warmth, restrained dark cocoa outlines only on peripheral props, friendly cozy bedtime mood rather than dark night. A simple horizontal pale honey-wood base platform at 88 percent image height across image. Preserve a completely empty very low-contrast pale lavender central play corridor from x=20 percent to x=80 percent and y=12 percent to y=86 percent; no furniture, architectural lines or decorations in lane. Empty top strip for later interface. No cats, no characters, no text, no UI, no score, no watermark. Straight-on orthographic camera. Same rounded pastel illustration family as cozy loaf-cat sticker art. Full bleed finished illustration.",
+   "model" : "google/gemini-2.5-flash-image"
+}

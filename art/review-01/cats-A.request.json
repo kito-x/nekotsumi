@@ -1,0 +1,6 @@
+{
+   "n" : 1,
+   "aspect_ratio" : "1:1",
+   "prompt" : "Use case: stylized-concept. Create a beautiful coherent character design review sheet for Cat Tower, a cute mobile cat-stacking game. Six expressive original sleepy loaf cats in a precise 3-column 2-row grid on solid pale cream, each fully separate with generous margins. Flat 2D sticker illustration, thick dark cocoa clean outlines, pastel peach sage lavender palette, restrained simple shading, crisp readable at tiny size. Every cat is a broad rounded horizontal loaf, tiny ears on top, paws tucked beneath, short tail hugging body, front-facing facial features, broad nearly level underside for stacking; no accessories extending outside silhouette. Top row: cream cat with sleepy closed eyes and tiny pink nose; ginger striped cat with smug half-open eyes; charcoal cat with surprised round eyes. Bottom row: white-and-ginger calico with one nervous brow; lavender-grey cat with delighted closed-eye smile; mint-tinted white cat with dizzy spiral eyes. Consistent body proportions and line weight. No text, no lettering, no border, no UI, no objects, no background scene. These are provisional character concepts, not a sprite animation sheet.",
+   "model" : "google/gemini-2.5-flash-image"
+}

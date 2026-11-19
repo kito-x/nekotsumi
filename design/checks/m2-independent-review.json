@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-16",
+  "coreAndLocalArt": "accepted within checked-browser limits",
+  "layout": "CT-DEV-002L assigned before M3",
+  "independentReport": "evidence/ct-test-001/CT-TEST-001-report.md",
+  "tests": {
+    "command": "npm test",
+    "exit": 0,
+    "pass": 66,
+    "fail": 0,
+    "durationMs": 147.3255,
+    "includesTypecheck": true
+  },
+  "hashes": {
+    "index.html": "f8c9d95fab55761d0363b017e9938e33173901117c610debef287b11cd167636",
+    "assets/main-CrK_-WtQ.js": "c6cfa64e2aa534a186cd875ca78b37e3eb207e4987fd4471d33488ac85cf46d8",
+    "assets/scene-DUsJrOXr.css": "db5ab21c5779d02ec1efceb6de0a65a7c0115b87e6bd7628642f1df7ed919d84"
+  },
+  "art": {
+    "activeImages": 12,
+    "activeBytes": 9317,
+    "physicalSVGs": 13,
+    "physicalBytes": 10739,
+    "approvedVariantAndOriginalHashes": "pass",
+    "DPR1and2": "Developer and independent Playtester evidence reviewed; not independently recaptured"
+  },
+  "independentArchitectLayoutReproduction": {
+    "method": "actual served app in viewport-sized capture-mode same-origin iframes, then removed",
+    "viewports": [
+      {
+        "width": 320,
+        "height": 568,
+        "clientWidth": 305,
+        "readoutBottom": 600,
+        "dropBottom": 542,
+        "skipBottom": 592.16,
+        "homeStartBottom": 530.5
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "clientWidth": 375,
+        "readoutBottom": 864.16,
+        "dropBottom": 806.16,
+        "skipBottom": 868.16,
+        "homeStartBottom": 493.5
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "clientWidth": 829,
+        "readoutBottom": 458.16,
+        "dropBottom": 419.16,
+        "skipBottom": 419.16,
+        "homeStartBottom": 473.28
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "clientWidth": 1280,
+        "readoutBottom": 724.16,
+        "dropBottom": 682.16,
+        "skipBottom": 708,
+        "homeStartBottom": 516.5
+      }
+    ],
+    "physicalDevice": false
+  },
+  "dispatch": "0a81eddc-5fcd-4706-8dc1-04aa3babe00e",
+  "writes": [
+    "ignored app/.test-build regenerated",
+    "design status/specification and evidence files"
+  ]
+}

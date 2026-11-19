@@ -1,0 +1,21 @@
+{
+  "name": "nekotsumi",
+  "private": true,
+  "version": "0.2.0-m2",
+  "type": "module",
+  "description": "Nekotsumi, a browser game about stacking cats",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5177 --strictPort",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4177 --strictPort",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run typecheck && npm run build:test && node --test .test-build/tests/*.test.js",
+    "bench": "npm run build:test && node .test-build/scripts/bench.js"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "typescript": "5.9.3",
+    "vite": "8.3.8"
+  }
+}

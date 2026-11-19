@@ -1,0 +1,34 @@
+{
+   "costEvidence" : {
+      "actualCostUSD" : 0.04,
+      "basis" : "1 returned image; grok-imagine-image-2.0,1k,low, $0.04 per output image",
+      "conversion" : "cost_in_usd_ticks / 10000000000",
+      "costTrackingSource" : "https://docs.x.ai/developers/cost-tracking",
+      "note" : "Actual per-request API-reported charge. Published estimate retained for comparison; account balance not queried.",
+      "publishedEstimateUSD" : 0.04,
+      "source" : "https://docs.x.ai/developers/pricing"
+   },
+   "data" : [
+      {
+         "mime_type" : "image/jpeg"
+      }
+   ],
+   "usage" : {
+      "cost_in_usd_ticks" : 400000000
+   },
+   "verification" : {
+      "bytes" : 178083,
+      "completedUnix" : 1794787943,
+      "endpoint" : "https://api.x.ai/v1/images/generations",
+      "height" : 1024,
+      "model" : "grok-imagine-image-2.0",
+      "output" : "grok-cats.jpg",
+      "provider" : "xAI direct API",
+      "samePromptAs" : "gemini-cats.request.json",
+      "sha256" : "986bd622fe6e0bb4a5beee45b5ead4e11d76f79631100574fd91b28003a69017",
+      "sourceRequest" : "grok-cats.request.json",
+      "startedUnix" : 1794787927,
+      "status" : "provisional-comparison-only",
+      "width" : 1024
+   }
+}
